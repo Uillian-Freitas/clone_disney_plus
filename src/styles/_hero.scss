@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.hero{
+  padding: 5.6vw;
+  min-height: 80vh;  
+  background-image: url(../../src/images/hero_desktop.jpeg);
+  background-size: cover;
+  background-position: center right;
+  
+
+    text-align: center;
+
+  &__content{
+    max-width: 640px;
+  }
+
+  &__branding {
+    max-width: 320px;
+    margin: 0 auto 38px;
+    transform: translateY(-40px);
+  }
+  .title--small{
+    margin-bottom: 64px;
+    transform: translateY(-40px);
+  }
+  p{
+    margin-bottom: 20px;
+    transform: translateY(-80px);
+    &:last-child{
+     margin-top: 60px; 
+    }
+  }
+  &__combos{
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-70px);
+      
+    &__combo{
+        width: calc(50% - 12px);
+      
+          img{
+          max-height: 55px;
+          display: center;
+        }
+        button {
+          display: block;
+          width: 90%;
+          height: 50px;
+          font-size: 16px;
+          color: variaveis.$corTextSecundaria;
+          background-color: #6421ff;
+          text-transform: uppercase;
+          border-radius: 4px;
+          margin-top: 2vw;
+          margin-bottom: 8px;
+        }
+      }
+  }
+
+}

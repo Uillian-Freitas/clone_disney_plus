@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev":"gulp watch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/Uillian-Freitas/clone_disney_plus#readme",
   "dependencies": {
     "gulp": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^6.0.1",
     "sass": "^1.97.3",
     "watch": "^1.0.2"
