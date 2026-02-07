@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body> 
-   <section class="hero">
+    <section class="hero">
     <div class="hero__content">
         <h1 class="hero__branding">
             <img src="./src/images/disneyplus.svg" alt="Disney+">
@@ -26,19 +26,19 @@
         <ul class="hero__combos">
             <li class="hero__combos__combo">
                 <img src="./src/images/logos/disney_star_plus.png" alt="Disney+ - Star+ - Combo+">
-                <button>Assine Agora</button>
+                <button class="button">Assine Agora</button>
                 <span class="text">R$ 45,90/mês*</span>
             </li>
             <li class="hero__combos__combo">
                 <img src="./src/images/logos/disney_star_plus.png" alt="Disney+ - Star+ - Combo+">
-                <button>Assine Agora</button>
+                <button class="button">Assine Agora</button>
                 <span class="text">R$ 45,90/mês*</span>
             </li>
         </ul>
         <p class="text--small">O preço pode variar caso a assinatura seja feita através de outras plataformas.</p>
     </div>
-   </section>
-   <section class="shows">
+    </section>
+    <section class="shows">
     <nav class="shows__tabs">
         <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active"> Em Breve</button>
             
@@ -146,7 +146,37 @@
             height="278">
         </li>
     </ul>
-   </section>
-   <script src="./src/main.js"></script>
+    </section>
+    <section class="plans">
+    <h2 class="title--big">Escolha seu Plano</h2>
+    </section>
+    <script src="./src/main.js"></script>
+    <ul class="plans__list">
+    <li class="plans__list__item">
+        <img src="./src/images/logos/disneyplus_underline.png" alt=""
+        width="250"
+        height="75">
+        <strong class="title--small">R$ 27,90/mês*</strong>
+        <p class="text--big">No Disney+ você encontra as últimas estreias do cinema originais e clássicos inesquecíveis.</p>
+        <button class="button">Assine Agora</button>
+    </li>
+    <li class="plans__list__item">
+        <img src="./src/images/logos/disney_star_plus_sm.png" alt=""
+        width="250"
+        height="75">
+        <strong class="title--small">R$ 45,90/mês*</strong>
+        <p class="text--big">Assine Disney+ e Star+ juntos. Economize e aproceite agora os dois serviços por um preço único.</p>
+        <button class="button">Assine Agora</button>
+    </li>
+    <li class="plans__list__item">
+        <img src="./src/images/logos/disney_star_plus_starzplay_underline.png" alt=""
+        width="250"
+        height="75">
+        <strong class="title--small">R$ 55,90/mês*</strong>
+        <p class="text--big">Disney+, Star+ e STARZPLAY em um plano especial. Assine agora os três serviços juntos.</p>
+        <button class="button">Assine Agora</button>
+    </li>
+    </ul>
+    <p class="text--small">O preço pode variar caso a asssinatura seja feita em outra plataforma.</p>
 </body>
 </html>

@@ -2,33 +2,35 @@
 
 .shows{
     padding: 2vw 5.6vw;
+    min-width: 50vw;
+
 
 
     &__list{
-        margin-top: 44px;
+        margin-top: 0;
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+        
 
         &--is-active{
             display: grid;
         }
         
-     
         &__item{     
             
             img {
                 max-width: 100%;
                 border-radius: 8px; 
-                transform: translateY(-110px);
+                
             }
         }
     }
     &__tabs{
-        transform: translateY(-120px);
         display: flex;
         justify-content: center;
         gap: 24px;
+        margin-bottom: 40px;
         &__button{
             
             color: variaveis.$corTextSecundaria;
@@ -39,7 +41,7 @@
             text-transform: uppercase;
             margin: 0.1vw;
             cursor: pointer;
-             border-bottom: 5px solid transparent;
+            border-bottom: 5px solid transparent;
             
             &--is-active{
                 border-color: variaveis.$corTextSecundaria;

@@ -1,6 +1,7 @@
 @use 'hero';
 @use 'variaveis';
 @use 'shows';
+@use 'plans';
 
 *{
     margin: 0;
@@ -43,7 +44,7 @@ body{
 }
 
 .title--big{
-    @include title(44px);
+    @include title(40px);
 }
 .title{
     @include title;
@@ -52,3 +53,15 @@ body{
     @include title(28px);
 }
 
+.button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        color: variaveis.$corTextSecundaria;
+        background-color: #6421ff;
+        text-transform: uppercase;
+        border-radius: 4px;
+        margin-top: 2vw;
+        margin-bottom: 8px;
+        }

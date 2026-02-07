@@ -6,6 +6,7 @@
   background-image: url(../../src/images/hero_desktop.jpeg);
   background-size: cover;
   background-position: center right;
+  margin-bottom: -100px;
   
 
     text-align: center;
@@ -17,23 +18,31 @@
   &__branding {
     max-width: 320px;
     margin: 0 auto 38px;
-    transform: translateY(-40px);
+
   }
+  .title--big {
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+  
   .title--small{
     margin-bottom: 64px;
-    transform: translateY(-40px);
+    
   }
   p{
     margin-bottom: 20px;
-    transform: translateY(-80px);
-    &:last-child{
-    margin-top: 60px; 
-    }
   }
   &__combos{
     display: flex;
     justify-content: space-between;
-    transform: translateY(-70px);
+  
       
     &__combo{
         width: calc(50% - 12px);
@@ -42,18 +51,7 @@
           max-height: 55px;
           display: center;
         }
-        button {
-          display: block;
-          width: 90%;
-          height: 50px;
-          font-size: 16px;
-          color: variaveis.$corTextSecundaria;
-          background-color: #6421ff;
-          text-transform: uppercase;
-          border-radius: 4px;
-          margin-top: 2vw;
-          margin-bottom: 8px;
-        }
+        
       }
   }
 
