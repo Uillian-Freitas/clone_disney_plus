@@ -1,0 +1,24 @@
+.image-text-section{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5.6vw;
+    overflow: hidden;
+    color: #fff;
+    &__text__container {
+        max-width: 520px;
+        margin-left: auto;
+        
+    }
+    h2{
+        margin-bottom: 24px;
+    }
+}
+
+.image-text-section--lion {
+    background-image: url('../../src/images/fundo_rei_leao.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

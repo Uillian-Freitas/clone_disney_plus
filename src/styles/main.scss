@@ -1,7 +1,11 @@
 @use 'hero';
-@use 'variaveis';
+@use 'variaveis'; 
 @use 'shows';
 @use 'plans';
+@use 'watch-anywhere';
+@use 'image-text-section';
+@use 'available-devices';
+@use 'faq';
 
 *{
     margin: 0;
@@ -17,7 +21,7 @@ body{
 
 }
 
-@mixin text($fontSize: 16px){
+@mixin text($fontSize: 14px){
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color:variaveis.$corTextPrincipal
@@ -65,3 +69,5 @@ body{
         margin-top: 2vw;
         margin-bottom: 8px;
         }
+
+        
