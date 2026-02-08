@@ -9,6 +9,11 @@
   margin-bottom: -100px;
   display: flex;
   align-items: center;
+
+  .button{
+    margin-top: 2vw;
+    margin-bottom: 8px;
+  }
   
 
     p {
@@ -63,6 +68,7 @@
       
     &__combo{
         width: calc(50% - 12px);
+        text-align: center;
       
           img{
           max-height: 55px;
@@ -71,6 +77,7 @@
         }
         
       }
+      
   }
 
 }

@@ -2,6 +2,20 @@ document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll('[data-tab-button]');
     const faqQuestion = document.querySelectorAll('.faq__question__item__question');
 
+
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function(){
+       const posicaoAtual = window.scrollY;
+
+       if(posicaoAtual < alturaHero){
+        ocultaElementosDoHeader();
+       }else{
+        exibeElementosDoHeader();
+       }
+    })
+
     // TABS (já estava correto)
     for(let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener('click', function(botao){
@@ -20,6 +34,16 @@ document.addEventListener('DOMContentLoaded', function(){
         faqQuestion[i].addEventListener('click', abreOuFechaResposta);
     }
 });
+
+function ocultaElementosDoHeader (){
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden')
+}
+
+function exibeElementosDoHeader (){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
+}
 
 function abreOuFechaResposta(evento){
     const classe = 'faq__question__item--is-open';
