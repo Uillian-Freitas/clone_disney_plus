@@ -1,57 +1,90 @@
 @use 'variaveis';
 
-.header{
+.header {
     position: sticky;
     top: 0;
     left: 0;
     z-index: 10;
     background-color: variaveis.$corFundo;
     transition: background-color .5s ease;
-    &--is-hidden{
+    overflow-x: hidden; // 🔑 evita scroll lateral
+
+    &--is-hidden {
         background-color: transparent;
-        transition: background-color .5s ease;
-        
 
-        .header__logo{
+        .header__logo {
             opacity: 0;
-            transition: opacity .5s ease;
-            
-        }
-        .header__links__item:first-child{
-            opacity: 0;
-            visibility: 0;
         }
 
+        .header__links__item:first-child {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
-    
-    &__container{
+
+    &__container {
         padding: 8px 36px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; // 🔑 segurança
     }
 
-    &__logo{
+    &__logo {
         max-width: 80px;
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;
+        flex-shrink: 0;
     }
 
-    &__links{
+    &__links {
         display: flex;
+        align-items: center;
+        max-width: 100%;
 
-        &__item{
+        &__item {
             margin: 5px;
             transition: opacity .5s ease;
-
-
+            flex-shrink: 0;
         }
     }
-    .button{
+
+    .button {
         height: 40px;
-
+        padding: 0 16px;
+        white-space: nowrap; // 🔑 evita estourar largura
+        width: auto;         // 🔑 remove 100% herdado
     }
-
 }
 
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+    .header {
+        &__container {
+            padding: 8px 16px; // 🔑 antes era 36px
+        }
+
+        &__logo {
+            max-width: 64px;
+            margin: 0;
+        }
+
+        &__links {
+            &__item {
+                margin: 0 4px;
+            }
+        }
+
+        .button {
+            height: 32px;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 32px;
+        }
+    }
+}

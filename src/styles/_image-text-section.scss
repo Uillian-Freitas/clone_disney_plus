@@ -1,26 +1,64 @@
-.image-text-section{
+/* =========================
+   DESKTOP / TABLET
+========================= */
+@media (min-width: 768px) {
+  .image-text-section {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .image-text-section__image {
+    height: 100%;
     display: flex;
     align-items: center;
-    padding: 5.6vw;
-    overflow: hidden;
-    color: #fff;
-    
+    justify-content: center;
+  }
 
-    &__text__container {
-        max-width: 520px;
-        margin-left: auto;
-        
-    }
-    h2{
-        margin-bottom: 24px;
-    }
+  .image-text-section__image img {
+    height: 90%;          /* 🔑 NÃO ocupa 100% */
+    width: auto;
+    max-width: 70vw;      /* 🔑 impede invadir o texto */
+    object-fit: contain;  /* 🔑 não corta */
+  }
+
+  .image-text-section__text__container {
+    position: absolute;
+    top: 50%;
+    right: 14vw;          /* 🔑 vai para o espaço vazio */
+    transform: translateY(-50%);
+    max-width: 520px;
+    text-align: left;
+  }
 }
 
-.image-text-section--lion {
-    background-image: url('../../src/images/fundo_rei_leao.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+  .image-text-section {
+    position: static;
+    height: auto;
+  }
+
+  .image-text-section__image {
+    height: 34vh;         /* 🔑 menor e sem corte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-text-section__image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .image-text-section__text__container {
+    position: static;
+    padding: 24px;
+    max-width: 100%;
+    text-align: center;
+  }
 }

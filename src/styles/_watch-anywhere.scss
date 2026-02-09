@@ -1,26 +1,69 @@
-.watch-anywhere{
-    padding: 5.6vw;
+.watch-anywhere {
+    padding: 5.6vw 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    img{
+    img {
         max-width: 100%;
+        display: block;
     }
-    
+
     &__text__container {
         padding: 0 2vw;
         max-width: 520px;
         text-align: left;
-}
-    }
 
-    h2{
-        margin-bottom: 24px;
+        h2 {
+            margin-bottom: 24px;
+        }
+
+        p {
+            max-width: 520px;
+            line-height: 1.6;
+            text-align: left;
+        }
     }
-    p{
-    max-width: 520px;
-    line-height: 1.6;
-    text-align: left;
-    
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1023px) {
+    .watch-anywhere {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+
+        &__text__container {
+            margin: 0 auto;
+            text-align: center;
+
+            p {
+                text-align: center;
+                max-width: 100%;
+            }
+        }
     }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+    .watch-anywhere {
+        display: block;
+        padding: 24px;
+        text-align: center;
+
+        img {
+            margin: 0 auto 24px;
+        }
+
+        &__text__container {
+            max-width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}

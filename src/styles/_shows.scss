@@ -1,56 +1,70 @@
 @use 'variaveis';
 
-.shows{
-    padding: 2vw 5.6vw;
-    min-width: 50vw;
+.shows {
+  padding: 2vw 5.6vw 0;
 
+  &__list {
+    margin-top: 0;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 
-
-    &__list{
-        margin-top: 0;
-        display: none;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 24px;
-
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr 1fr;
-        }
-        
-
-        &--is-active{
-            display: grid;
-        }
-        
-        &__item{     
-            
-            img {
-                max-width: 100%;
-                border-radius: 8px; 
-                
-            }
-        }
+    &--is-active {
+      display: grid;
     }
-    &__tabs{
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-bottom: 40px;
-        &__button{
-            
-            color: variaveis.$corTextSecundaria;
-            font-size: 20px;
-            border:none;
-            padding-bottom: 5px;
-            background: none;
-            text-transform: uppercase;
-            margin: 0.1vw;
-            cursor: pointer;
-            border-bottom: 5px solid transparent;
-            
-            &--is-active{
-                border-color: variaveis.$corTextSecundaria;
-            
-            }
-        }
+
+    &__item {
+      img {
+        width: 100%;
+        height: auto;          // 🔑 ESSENCIAL
+        display: block;
+        border-radius: 8px;
+      }
     }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+
+    &__button {
+      color: variaveis.$corTextSecundaria;
+      font-size: 20px;
+      border: none;
+      padding-bottom: 5px;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 5px solid transparent;
+
+      &--is-active {
+        border-color: variaveis.$corTextSecundaria;
+      }
+    }
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+  .shows {
+    padding: 24px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    &__tabs {
+      gap: 16px;
+      margin-bottom: 24px;
+
+      &__button {
+        font-size: 12px;
+        padding-bottom: 4px;
+        border-bottom-width: 3px;
+      }
+    }
+  }
 }

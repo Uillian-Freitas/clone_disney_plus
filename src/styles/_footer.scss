@@ -1,15 +1,17 @@
 @use 'variaveis';
 
-.footer{
+.footer {
     padding: 26px 8px;
+    overflow-x: hidden; // 🔑 impede scroll lateral
+
     &__container {
         max-width: 1024px;
         width: 100%;
-        margin:0 auto;
+        margin: 0 auto;
         text-align: center;
         padding-bottom: 20px;
+        overflow-x: hidden; // 🔑 segurança extra
     }
-
 
     &__links {
         margin-bottom: 16px;
@@ -17,50 +19,111 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        &__item {
-            display: inline-block;
+        width: 100%;
 
-            a{
+        &__item {
+            display: block; // 🔑 evita cálculo estranho de largura
+
+            a {
                 text-decoration: none;
                 padding: 8px 16px;
-                
+                display: inline-block;
+                max-width: 100%;
+                white-space: normal; // 🔑 evita estourar largura
+
                 &:hover {
-                color: variaveis.$corTextSecundaria;
+                    color: variaveis.$corTextSecundaria;
                 }
             }
-            }
         }
-        &__rodape{
+    }
+
+    &__rodape {
         margin: 16px auto 0;
         max-width: 1024px;
         opacity: 0.7;
         line-height: 1.5;
         text-align: center;
-        }
+        padding: 0 8px; // 🔑 evita encostar nas bordas
     }
-    
-    .language-selector{
-        display: flex;
-        align-items: center;
-        img{
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden; // 🔑 evita scroll
+
+    img {
         height: 18px;
         width: 18px;
+        flex-shrink: 0;
     }
-    select{
+
+    select {
         background-color: transparent;
         border: none;
         color: variaveis.$corTextPrincipal;
         height: 38px;
+        max-width: 100%;
 
-        &__focus {
-        outline: none;
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: variaveis.$corTextSecundaria;
+        }
+
+        option {
+            color: variaveis.$corSelect;
+        }
+    }
 }
 
-        &:hover{
-            color: variaveis.$corTextSecundaria
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+    .footer {
+        padding: 24px 16px;
+
+        &__container {
+            padding-bottom: 12px;
         }
-        option{
-            color: variaveis.$corSelect;
+
+        &__links {
+            gap: 8px;
+            margin-bottom: 12px;
+
+            &__item {
+                a {
+                    padding: 6px 10px;
+                    font-size: 12px;
+                    line-height: 1.3;
+                }
+            }
+        }
+
+        &__rodape {
+            font-size: 11px;
+            line-height: 1.4;
+            max-width: 100%;
+        }
+    }
+
+    .language-selector {
+        margin-bottom: 12px;
+
+        img {
+            height: 14px;
+            width: 14px;
+        }
+
+        select {
+            font-size: 12px;
+            height: 32px;
         }
     }
 }
