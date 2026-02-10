@@ -1,7 +1,7 @@
 /* =========================
-   DESKTOP / TABLET
+   DESKTOP
 ========================= */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .image-text-section {
     position: relative;
     height: 100vh;
@@ -16,16 +16,16 @@
   }
 
   .image-text-section__image img {
-    height: 90%;          /* 🔑 NÃO ocupa 100% */
+    height: 90%;
     width: auto;
-    max-width: 70vw;      /* 🔑 impede invadir o texto */
-    object-fit: contain;  /* 🔑 não corta */
+    max-width: 70vw;
+    object-fit: contain;
   }
 
   .image-text-section__text__container {
     position: absolute;
     top: 50%;
-    right: 14vw;          /* 🔑 vai para o espaço vazio */
+    right: 14vw;
     transform: translateY(-50%);
     max-width: 520px;
     text-align: left;
@@ -60,5 +60,35 @@
     padding: 24px;
     max-width: 100%;
     text-align: center;
+  }
+}
+/* ===== TABLET (igual ao mobile) ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 24px;
+  }
+
+  .image-text-section__image {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .image-text-section__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-text-section__text__container {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .image-text-section__text__container h2 {
+    margin-bottom: 16px;
   }
 }

@@ -131,3 +131,67 @@
     text-align: center;
   }
 }
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+      .hero {
+   background-size: 120% auto;   // 👈 aumenta a imagem
+    background-position: center top;
+    padding-left: 0;
+    padding-right: 0;
+     align-items: flex-start;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    padding: 0 40px; 
+    margin-top: -70px;
+  }
+
+    background-image: url(../../src/images/hero_celular.jpeg);
+    background-size: cover; // 🔥 preenche tudo, sem bordas pretas
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    padding-top: 45vh; // controla o quanto a imagem aparece
+    align-items: flex-start;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero__branding {
+    max-width: 260px;
+    margin: 0 auto 24px;
+  }
+
+  .hero h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .hero__combos {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .hero__combos__combo {
+    width: 45%;
+    max-width: 320px;
+
+    img {
+      max-height: 52px;
+    }
+  }
+
+  .hero p {
+    text-align: center;
+  }
+}
